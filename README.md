@@ -1,47 +1,47 @@
-# 📝 Claude Conversation Exporter
+# Claude Conversation Exporter
 
 [![Version](https://img.shields.io/badge/version-1.1.1-blue.svg)](https://github.com/matvei77/claude-ai-downloader)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Chrome Extension](https://img.shields.io/badge/chrome-extension-orange.svg)](https://developer.chrome.com/docs/extensions/)
 
-A Chrome extension that exports Claude.ai conversations with full context: messages, artifacts, attachments, and code blocks. Perfect for archiving, sharing, or analyzing your Claude conversations.
+A Chrome extension that exports Claude.ai conversations to markdown files with full context: messages, artifacts, attachments, and code blocks.
 
-## 🚀 Features
+## Features
 
-- ✅ **Complete Message Export** - Captures all human messages and Claude responses
-- 🎨 **Artifact Extraction** - Exports all code blocks, components, and artifacts
-- 📎 **Attachment Support** - Includes uploaded files and their content
-- 📊 **Structured Output** - Clean markdown format with references and full context
-- 🔒 **Privacy-First** - All processing happens locally, no data sent anywhere
+- **Complete Message Export** - Captures all human messages and Claude responses
+- **Artifact Extraction** - Exports all code blocks, components, and artifacts
+- **Attachment Support** - Includes uploaded files and their content
+- **Structured Output** - Clean markdown format with references and full context
+- **Privacy-First** - All processing happens locally, no data sent anywhere
 
-## 📦 Installation
+## Installation
 
 ### Step 1: Generate Icons
 1. Open `icons/generate-icons.html` in your browser
 2. Click "Download All Icons"
 3. Save the three PNG files to the `icons/` directory
 
-Alternatively, you can use any icons you want - just make sure they're named:
+Required icon files:
 - `icon16.png` (16x16px)
 - `icon48.png` (48x48px)
 - `icon128.png` (128x128px)
 
 ### Step 2: Load Extension in Chrome
-1. Open Chrome and navigate to `chrome://extensions/`
+1. Navigate to `chrome://extensions/`
 2. Enable "Developer mode" (toggle in top right)
 3. Click "Load unpacked"
-4. Select the `claude-ai-download` folder
-5. The extension should now appear in your browser toolbar
+4. Select the project folder
+5. Extension icon should appear in your browser toolbar
 
-## 🎯 Usage
+## Usage
 
 1. Navigate to https://claude.ai and open a conversation
-2. Click the Claude Exporter extension icon in your toolbar
-3. Click the "Export Conversation" button
-4. Wait a few seconds while the export processes
-5. A markdown file will be downloaded automatically
+2. Click the extension icon in your toolbar
+3. Click "Export Conversation"
+4. Wait for processing to complete
+5. Save the downloaded markdown file
 
-## 📂 Output Format
+## Output Format
 
 The exported markdown file contains:
 
@@ -55,10 +55,10 @@ The exported markdown file contains:
 - Full attachment content
 - Structured with anchor links from the conversation
 
-## 🔧 How It Works
+## How It Works
 
 1. **Content Script** (`content.js`) - Runs on Claude.ai pages
-   - **Extracts Claude responses directly from DOM** (no clipboard needed!)
+   - Extracts Claude responses directly from DOM
    - Extracts messages via edit button simulation
    - Scans DOM for artifacts and attachments
    - Checks localStorage for additional content
@@ -72,7 +72,7 @@ The exported markdown file contains:
    - Shows export status
    - Communicates with content script
 
-## 🛠️ Project Structure
+## Project Structure
 
 ```
 claude-ai-download/
@@ -91,7 +91,7 @@ claude-ai-download/
 └── README.md            # This file
 ```
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### Extension doesn't appear after loading
 - Make sure you selected the correct folder
@@ -104,7 +104,7 @@ claude-ai-download/
 - Try reloading the Claude.ai page
 
 ### Some content is missing from export
-- **First**: Reload the extension in `chrome://extensions/` and try again
+- First: Reload the extension in `chrome://extensions/` and try again
 - The extension relies on Claude's DOM structure
 - If Claude updates their UI, selectors may need updating
 - Check console for warnings about failed extractions
@@ -115,13 +115,13 @@ claude-ai-download/
 - Look for errors in the extension's service worker console
 - Try clicking the export button again
 
-## 🔍 Debugging
+## Debugging
 
 ### View Content Script Logs
 1. Open Claude.ai conversation
 2. Press F12 to open DevTools
 3. Go to Console tab
-4. Look for messages with emoji prefixes (🎨, 📎, 📝, etc.)
+4. Look for export-related messages
 
 ### View Background Script Logs
 1. Go to `chrome://extensions/`
@@ -134,7 +134,7 @@ claude-ai-download/
 2. Select "Inspect popup"
 3. Console will show popup script logs
 
-## 🚨 Known Limitations
+## Known Limitations
 
 - **DOM Selectors**: Claude may update their UI, breaking selectors
 - **Large Conversations**: Very long conversations may take longer to process
@@ -142,24 +142,24 @@ claude-ai-download/
 - **Real-time Updates**: Must click export button; doesn't auto-export
 - **Formatting**: Some special formatting in Claude's responses may not be preserved perfectly
 
-## 🔐 Privacy & Security
+## Privacy & Security
 
-- ✅ All processing happens locally in your browser
-- ✅ No data is sent to external servers
-- ✅ No tracking or analytics
-- ✅ Open source - inspect the code yourself
-- ✅ Only requests minimal required permissions
+- All processing happens locally in your browser
+- No data is sent to external servers
+- No tracking or analytics
+- Open source - inspect the code yourself
+- Only requests minimal required permissions
 
-## 📝 Permissions Explained
+## Permissions Explained
 
 - **activeTab** - Access current Claude.ai page to read conversation
 - **downloads** - Save markdown file to your computer
 - **storage** - (Optional) Save user preferences
 - **host_permissions** - Only works on claude.ai domains
 
-## 🤝 Contributing
+## Contributing
 
-Contributions are welcome! Feel free to:
+Contributions are welcome:
 - Report bugs via GitHub Issues
 - Suggest features or improvements
 - Submit pull requests
@@ -167,29 +167,21 @@ Contributions are welcome! Feel free to:
 
 Please ensure your code follows the existing style and includes appropriate comments.
 
-## 📜 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Attribution
+## Attribution
 
 - **Author**: [Matvei](https://github.com/matvei77)
 - **Developed with**: [Claude Code](https://claude.com/claude-code) by Anthropic
 - **Original concept**: Converted from `terminal.js` bookmarklet to full Chrome extension
 
-## 📮 Support
+## Support
 
 If you encounter issues:
-1. Check the [Troubleshooting](#-troubleshooting) section above
+1. Check the [Troubleshooting](#troubleshooting) section above
 2. Review console logs for errors (F12 → Console)
 3. Ensure you're on the latest version of Chrome
 4. Verify Claude.ai hasn't changed their UI structure
 5. Open an issue on [GitHub](https://github.com/matvei77/claude-ai-downloader/issues)
-
-## ⭐ Star This Project
-
-If you find this extension useful, please consider giving it a star on GitHub!
-
----
-
-**Enjoy exporting your Claude conversations! 🎉**

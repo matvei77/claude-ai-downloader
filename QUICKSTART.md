@@ -1,6 +1,6 @@
-# 🚀 Quick Start Guide
+# Quick Start Guide
 
-Get the Claude Conversation Exporter running in 3 minutes!
+Get the Claude Conversation Exporter running in 3 minutes.
 
 ## Step 1: Generate Icons (1 minute)
 
@@ -23,7 +23,7 @@ icons/generate-icons.html
 3. Enable **"Developer mode"** (toggle in top-right corner)
 4. Click **"Load unpacked"**
 5. Select this folder: `claude-ai-download`
-6. ✅ Extension loaded!
+6. Extension loaded!
 
 ## Step 3: Test It (1 minute)
 
@@ -32,7 +32,7 @@ icons/generate-icons.html
 3. Click the **Claude Exporter** icon in your toolbar
 4. Click **"Export Conversation"** button
 5. Wait a few seconds
-6. 🎉 Markdown file downloads automatically!
+6. Markdown file downloads automatically!
 
 ## That's It!
 
@@ -40,7 +40,7 @@ You're ready to export Claude conversations with full context.
 
 ---
 
-## 🆘 Quick Troubleshooting
+## Quick Troubleshooting
 
 **Extension won't load?**
 - Make sure you selected the right folder
@@ -57,10 +57,8 @@ You're ready to export Claude conversations with full context.
 
 ---
 
-## 📚 Next Steps
+## Next Steps
 
 - Read [README.md](README.md) for full documentation
 - Check [TESTING.md](TESTING.md) for comprehensive testing guide
 - Review code in `content.js` to understand how it works
-
-**Enjoy your exports! 📝**

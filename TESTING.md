@@ -1,4 +1,4 @@
-# 🧪 Testing Guide for Claude Conversation Exporter
+# Testing Guide for Claude Conversation Exporter
 
 ## Pre-Testing Setup
 
@@ -18,7 +18,7 @@ open icons/generate-icons.html
 4. Select the `claude-ai-download` folder
 5. Confirm extension appears with no errors
 
-## 🎯 Test Checklist
+## Test Checklist
 
 ### Test 1: Basic Installation
 - [ ] Extension appears in `chrome://extensions/`
@@ -35,7 +35,7 @@ open icons/generate-icons.html
 ### Test 3: Content Script Loading
 1. Go to https://claude.ai
 2. Open DevTools (F12) → Console
-3. Look for: `✅ Claude Conversation Exporter content script loaded`
+3. Look for: `Claude Conversation Exporter content script loaded`
 4. - [ ] Message appears
 
 ### Test 4: Export on Empty Page
@@ -50,11 +50,11 @@ open icons/generate-icons.html
 3. Wait for Claude to respond to each
 4. Click extension icon → "Export Conversation"
 5. Check console output:
-   - [ ] See "🚀 Export triggered"
-   - [ ] See "📝 Extracting human messages..."
-   - [ ] See "🎨 Extracting artifacts..."
-   - [ ] See "📎 Extracting attachments..."
-   - [ ] See "🤖 Copying Claude responses..."
+   - [ ] See "Export triggered"
+   - [ ] See "Extracting human messages..."
+   - [ ] See "Extracting artifacts..."
+   - [ ] See "Extracting attachments..."
+   - [ ] See "Copying Claude responses..."
    - [ ] See download dialog appear
 6. Open downloaded markdown file:
    - [ ] Contains all your messages
@@ -93,8 +93,8 @@ open icons/generate-icons.html
 2. Click "service worker" under extension
 3. Trigger an export
 4. Check logs:
-   - [ ] "📥 Download request received"
-   - [ ] "✅ Download started with ID: X"
+   - [ ] "Download request received"
+   - [ ] "Download started with ID: X"
    - [ ] No errors
 
 ### Test 10: File Naming
@@ -129,7 +129,7 @@ Try these scenarios:
 3. Close popup during export
    - [ ] Export should continue in background
 
-## 🐛 Debugging Failed Tests
+## Debugging Failed Tests
 
 ### If content script doesn't load:
 ```javascript
@@ -173,54 +173,54 @@ chrome.runtime.sendMessage({action: 'startExport'})
 - **Cause**: PNG files not generated
 - **Fix**: Run generate-icons.html and save PNGs
 
-## 📊 Expected Output Structure
+## Expected Output Structure
 
 Your exported markdown should have:
 
 ```markdown
-# 📝 Conversation with Claude
+# Conversation with Claude
 
 **Exported:** [date]
 **Stats:** X messages, Y responses, Z artifacts, W attachments
 
 ---
 
-## 👤 Human:
+## Human:
 [message content]
 ---
 
-## 🤖 Claude:
+## Claude:
 [response content]
 ---
 
 [... more messages ...]
 
-# 📚 CONTEXT
+# CONTEXT
 
-## 📎 Uploaded Files & Attachments
+## Uploaded Files & Attachments
 [if any]
 
-## 🎨 Artifacts (Code, Diagrams, Components)
+## Artifacts (Code, Diagrams, Components)
 [full artifact code]
 
-## 📊 Export Summary
+## Export Summary
 [statistics]
 ```
 
-## ✅ Success Criteria
+## Success Criteria
 
 All tests passing means:
-- ✅ Extension loads without errors
-- ✅ Popup UI works and looks good
-- ✅ Content script injects correctly
-- ✅ Messages extracted successfully
-- ✅ Claude responses captured via DOM extraction
-- ✅ Artifacts captured
-- ✅ Downloads work properly
-- ✅ Markdown file is well-formatted
-- ✅ No console errors during normal operation
+- Extension loads without errors
+- Popup UI works and looks good
+- Content script injects correctly
+- Messages extracted successfully
+- Claude responses captured via DOM extraction
+- Artifacts captured
+- Downloads work properly
+- Markdown file is well-formatted
+- No console errors during normal operation
 
-## 🎓 Advanced Testing
+## Advanced Testing
 
 ### Performance Test
 1. Find a very long conversation (50+ messages)
@@ -243,7 +243,7 @@ Test in:
 - [ ] Edge (Chromium)
 - [ ] Brave
 
-## 📝 Reporting Issues
+## Reporting Issues
 
 When reporting bugs, include:
 1. Chrome version
@@ -251,7 +251,3 @@ When reporting bugs, include:
 3. Console logs (both content and background)
 4. Steps to reproduce
 5. Expected vs actual behavior
-
----
-
-**Happy Testing! 🧪**
