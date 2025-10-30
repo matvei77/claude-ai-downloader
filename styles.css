@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 320px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #333;
+}
+
+.container {
+  background: white;
+  border-radius: 0;
+  overflow: hidden;
+}
+
+.header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.subtitle {
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+.content {
+  padding: 20px;
+}
+
+.export-btn {
+  width: 100%;
+  padding: 14px 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.export-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(102, 126, 234, 0.4);
+}
+
+.export-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+}
+
+.export-btn .icon {
+  font-size: 18px;
+}
+
+.export-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.status {
+  margin-top: 16px;
+  padding: 12px;
+  background: #f0f4ff;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #4c51bf;
+}
+
+.status.exporting {
+  background: #fff4e6;
+  color: #c05621;
+}
+
+.status.success {
+  background: #e6ffed;
+  color: #22543d;
+}
+
+.status.error {
+  background: #ffe6e6;
+  color: #c53030;
+}
+
+.status-icon {
+  font-size: 16px;
+}
+
+.info {
+  margin-top: 20px;
+  padding: 16px;
+  background: #f7fafc;
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+.info strong {
+  color: #2d3748;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.info ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.info li {
+  padding: 6px 0;
+  color: #4a5568;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.footer {
+  margin-top: 16px;
+  text-align: center;
+}
+
+.note {
+  font-size: 11px;
+  color: #718096;
+  font-style: italic;
+}

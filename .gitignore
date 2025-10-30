@@ -1,0 +1,23 @@
+# Chrome extension artifacts
+*.crx
+*.pem
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Temporary files
+*.tmp
+*.log
+
+# Windows/WSL artifacts
+*:Zone.Identifier
+
+# Note: We intentionally don't ignore icon PNG files
+# so users know they need to generate them

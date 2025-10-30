@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Claude Exporter</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>📝 Claude Exporter</h1>
+      <p class="subtitle">Export conversations with full context</p>
+    </div>
+
+    <div class="content">
+      <button id="exportBtn" class="export-btn">
+        <span class="icon">🚀</span>
+        <span class="text">Export Conversation</span>
+      </button>
+
+      <div id="status" class="status">
+        <span class="status-icon">✓</span>
+        <span class="status-text">Ready to export</span>
+      </div>
+
+      <div class="info">
+        <p><strong>What will be exported:</strong></p>
+        <ul>
+          <li>💬 All messages (Human + Claude)</li>
+          <li>🎨 Artifacts & code blocks</li>
+          <li>📎 Attachments & uploaded files</li>
+          <li>📊 Full context & references</li>
+        </ul>
+      </div>
+
+      <div class="footer">
+        <p class="note">Export will be saved as markdown file</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
